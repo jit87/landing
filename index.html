@@ -1,0 +1,165 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tu Nombre — Desarrollador Front-end</title>
+  <meta name="description" content="Portafolio front-end con proyectos seleccionados, enfoque en accesibilidad, rendimiento y maquetación semántica.">
+  <!-- TODO: dominio real -->
+  <link rel="canonical" href="https://example.com/">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tu Nombre — Desarrollador Front-end">
+  <meta property="og:description" content="Portafolio front-end con proyectos seleccionados, enfoque en accesibilidad, rendimiento y maquetación semántica.">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="assets/img/placeholder-project.svg"><!-- TODO: usar imagen 1200x630 real -->
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Tu Nombre">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tu Nombre — Desarrollador Front-end">
+  <meta name="twitter:description" content="Portafolio front-end con proyectos seleccionados, enfoque en accesibilidad, rendimiento y maquetación semántica.">
+  <meta name="twitter:image" content="assets/img/placeholder-project.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tu Nombre",
+    "jobTitle": "Desarrollador Front-end",
+    "url": "https://example.com/"
+  }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <header class="site-header">
+    <nav class="container nav" aria-label="Principal">
+      <a class="brand" href="#main">Tu Nombre</a>
+      <ul class="nav__list">
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section id="inicio" class="section hero" aria-labelledby="hero-title">
+      <div class="container">
+        <h1 id="hero-title">Tu Nombre — Desarrollador Front-end</h1>
+        <p class="hero__pitch">Construyo interfaces claras, accesibles y eficientes con HTML, CSS y JavaScript puro, poniendo el foco en la experiencia de usuario.</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#proyectos">Ver proyectos</a>
+          <a class="button button--ghost" href="#contacto">Hablemos</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="section" aria-labelledby="proyectos-title">
+      <div class="container">
+        <h2 id="proyectos-title">Proyectos</h2>
+        <ul class="project-grid">
+          <li>
+            <article class="project-card">
+              <!-- TODO: reemplazar imagen por captura real -->
+              <img src="assets/img/placeholder-project.svg" alt="Captura de pantalla del proyecto Plataforma de reservas" width="640" height="400" loading="lazy" decoding="async">
+              <h3>Plataforma de reservas</h3>
+              <p>Interfaz para gestionar reservas con validación sencilla y estados claros para el usuario.</p>
+              <ul class="tag-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <a class="project-card__link" href="#" target="_blank" rel="noopener noreferrer">Ver proyecto</a><!-- TODO: URL -->
+            </article>
+          </li>
+          <li>
+            <article class="project-card">
+              <!-- TODO: reemplazar imagen por captura real -->
+              <img src="assets/img/placeholder-project.svg" alt="Captura de pantalla del proyecto Catálogo de productos" width="640" height="400" loading="lazy" decoding="async">
+              <h3>Catálogo de productos</h3>
+              <p>Listado filtrable con maquetación responsiva centrado en legibilidad y accesibilidad.</p>
+              <ul class="tag-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <a class="project-card__link" href="#" target="_blank" rel="noopener noreferrer">Ver proyecto</a><!-- TODO: URL -->
+            </article>
+          </li>
+          <li>
+            <article class="project-card">
+              <!-- TODO: reemplazar imagen por captura real -->
+              <img src="assets/img/placeholder-project.svg" alt="Captura de pantalla del proyecto Formulario de contacto" width="640" height="400" loading="lazy" decoding="async">
+              <h3>Formulario de contacto</h3>
+              <p>Formulario accesible con validación en cliente y mensajes de estado claros.</p>
+              <ul class="tag-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <a class="project-card__link" href="#" target="_blank" rel="noopener noreferrer">Ver proyecto</a><!-- TODO: URL -->
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="section" aria-labelledby="sobre-title">
+      <div class="container">
+        <h2 id="sobre-title">Sobre mí</h2>
+        <img class="avatar" src="assets/img/placeholder-project.svg" alt="Foto de perfil de Tu Nombre" width="320" height="320" loading="lazy" decoding="async">
+        <!-- TODO: reemplazar con foto real 320x320 -->
+        <p class="bio">Desarrollador front-end con interés en maquetación semántica, accesibilidad y rendimiento. Me gusta traducir requisitos claros en interfaces simples y mantenibles.</p>
+        <ul class="skill-list">
+          <li>HTML semántico</li>
+          <li>CSS moderno</li>
+          <li>JavaScript vanilla</li>
+          <li>Accesibilidad web</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contacto" class="section" aria-labelledby="contacto-title">
+      <div class="container">
+        <h2 id="contacto-title">Contacto</h2>
+        <p>Si tienes una propuesta o quieres hablar sobre un proyecto, envíame un mensaje.</p>
+        <!-- TODO: configurar Web3Forms o endpoint propio -->
+        <form id="contact-form" novalidate>
+          <input type="checkbox" name="botcheck" class="form__honeypot" tabindex="-1" autocomplete="off" hidden>
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" required minlength="2" autocomplete="name" aria-describedby="nombre-error">
+            <p class="field-error" id="nombre-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" required autocomplete="email" aria-describedby="email-error">
+            <p class="field-error" id="email-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required minlength="10" aria-describedby="mensaje-error"></textarea>
+            <p class="field-error" id="mensaje-error" hidden></p>
+          </div>
+          <button type="submit" class="button button--primary">Enviar mensaje</button>
+          <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer">
+      <p>© <span data-year></span> Tu Nombre</p>
+      <ul class="footer__links">
+        <li><a href="#" target="_blank" rel="noopener noreferrer">GitHub</a><!-- TODO --></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a><!-- TODO --></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

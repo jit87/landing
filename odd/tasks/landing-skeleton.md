@@ -49,7 +49,7 @@ every later fix costs a rewrite.
 - [x] T3. Design tokens and mobile-first stylesheet. — d9c8404
 - [x] T4. Contact form validation and submission handling. — f3ba7c8
 - [x] T5. Verification: structure, accessibility and performance checks. — 02b8a7a
-- [ ] T6. Native review: blocked on `managed_assets_outdated`.
+- [ ] T6. Native review: consent granted, then blocked by the host transport. Lineage `review-261db5aed29807b0`, lens `review-reliability` unachievable in this session (nested repository); no approval recorded, no correction applied.
 
 ## Verification evidence
 

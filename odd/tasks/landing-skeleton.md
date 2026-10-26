@@ -44,11 +44,36 @@ every later fix costs a rewrite.
 
 ## Tasks
 
-- [ ] T1. Repository scaffolding: `.gitignore`, folder layout, SVG placeholder assets.
-- [ ] T2. Semantic HTML with SEO head and placeholder content.
-- [ ] T3. Design tokens and mobile-first stylesheet.
-- [ ] T4. Contact form validation and submission handling.
-- [ ] T5. Verification: structure, accessibility and performance checks.
+- [x] T1. Repository scaffolding: `.gitignore`, folder layout, SVG placeholder assets. — 3807545
+- [x] T2. Semantic HTML with SEO head and placeholder content. — e1a32ed
+- [x] T3. Design tokens and mobile-first stylesheet. — d9c8404
+- [x] T4. Contact form validation and submission handling. — f3ba7c8
+- [x] T5. Verification: structure, accessibility and performance checks. — 02b8a7a
+- [ ] T6. Native review: blocked on `managed_assets_outdated`.
+
+## Verification evidence
+
+- `node --check js/main.js` → exit 0.
+- CSS braces balanced 58/58.
+- Gates clean: no `!important`, no `console.log`, exactly one `<h1>`, every `<img>` with `alt`/`width`/`height`, every `label for=` bound, `lang="es"`, `script defer`.
+- `gentle-ai review assess` → risk `medium`, 812 changed lines, `review_due: slice_budget_reached`.
+- `gentle-ai review status` → `stop(managed_assets_outdated)`; `sync --dry-run` reports 14 apply steps over global managed components. Not executed.
+
+## Corrections applied after reviewing writer output
+
+- Honeypot used `aria-hidden` around a focusable input (`aria-hidden-focus` violation) → replaced with a native `hidden` input.
+- Sticky header hid anchor targets → added `scroll-padding-top`.
+- Avatar used a fixed `320x320`, distorting the 640x400 placeholder → `min(320px, 100%)` + `aspect-ratio: 1` + `object-fit: cover`.
+- Hardcoded success color → `--color-success` token.
+- Removed unused `.visually-hidden` rule (dead CSS).
+- Five duplicated list resets → single `ul[class]` rule.
+- Whitespace-only values passed client validation → trim check before validity gates.
+
+## Pending (owner)
+
+- Real copy, project URLs, social URLs, canonical domain, Web3Forms key.
+- `og:image` and `twitter:image` are relative and SVG: social crawlers require an absolute PNG/JPG (1200x630).
+- `href="#"` placeholders must not ship.
 
 ## Acceptance criteria
 

@@ -46,6 +46,17 @@
 
 * {
   margin: 0;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='3' fill='%23d4af37'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%237c3aed' stroke-width='2' opacity='0.9'/%3E%3C/svg%3E") 16 16, auto;
+}
+
+a,
+button,
+[role='button'],
+.button,
+.project-card__link,
+.nav__list a,
+.footer__links a {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='4' fill='%23d4af37'/%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='%23f0c75e' stroke-width='2'/%3E%3C/svg%3E") 16 16, pointer;
 }
 
 ul[class] {

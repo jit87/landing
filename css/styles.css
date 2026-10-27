@@ -131,6 +131,7 @@ body {
   padding-inline: var(--space-2);
   color: var(--color-text);
   text-decoration: none;
+  cursor: pointer;
 }
 
 .nav__list a:hover,
@@ -185,6 +186,7 @@ h3 {
   font: inherit;
   border: 1px solid transparent;
   transition: opacity 120ms ease-in-out;
+  cursor: pointer;
 }
 
 .button--primary {
@@ -264,6 +266,7 @@ h3 {
   text-decoration: none;
   align-self: flex-start;
   transition: opacity 120ms ease-in-out, text-decoration-color 120ms ease-in-out;
+  cursor: pointer;
 }
 
 .project-card__link:hover,

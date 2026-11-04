@@ -382,14 +382,14 @@ h3 {
   outline-offset: 2px;
 }
 
-.project-grid {
+.service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
   gap: var(--space-5);
   margin-top: var(--space-5);
 }
 
-.project-card {
+.service-card {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
@@ -414,7 +414,7 @@ h3 {
   border-color: color-mix(in srgb, var(--color-gold) 80%, #ffffff 20%);
 }
 
-.project-card img {
+.service-card img {
   border-radius: var(--radius-md);
 }
 

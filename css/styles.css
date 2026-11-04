@@ -182,6 +182,9 @@ h1 {
   line-height: 1.1;
 }
 
+/* Animación basada en el Pen de htmldesdecero:
+     https://codepen.io/htmldesdecero/pen/pvoOgoY (MIT) */
+
 /* Hero title aurora. The layer blends with the title glyphs (darken) and
    disappears over the dark page background, so only the letters get tinted.
    Do not isolate the heading: the blend needs the page background as backdrop. */

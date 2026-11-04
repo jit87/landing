@@ -9,7 +9,7 @@ salvo el envío del formulario.
 - `index.html` — estructura semántica, metadatos SEO y formulario de contacto.
 - `css/styles.css` — tokens de diseño, tema oscuro y animaciones.
 - `js/main.js` — validación del formulario y envío vía Web3Forms.
-- `assets/img/` — favicon e imágenes de relleno.
+- `assets/img/` — favicon e ilustraciones SVG de los servicios y del equipo.
 
 ## Cómo verla
 
@@ -24,7 +24,7 @@ python -m http.server 8000
 - Sustituir la marca «SoftwareLovers» por la definitiva.
 - Reemplazar el dominio `https://example.com/` en canonical, Open Graph y JSON-LD.
 - Configurar `ACCESS_KEY` de Web3Forms en `js/main.js`.
-- Cambiar las imágenes de relleno y los enlaces marcados con `TODO`.
+- Revisar las ilustraciones SVG de `assets/img/` y los enlaces marcados con `TODO`.
 
 ## Accesibilidad
 

@@ -14,6 +14,11 @@
   --color-bg: #0f0b1e;
   --color-gold: #d4af37;
 
+  --aurora-1: #a78bfa;
+  --aurora-2: #d4af37;
+  --aurora-3: #ddd6fe;
+  --aurora-4: #f0abfc;
+
   --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
   --text-sm: 0.875rem;
@@ -175,6 +180,162 @@ body {
 h1 {
   font-size: var(--text-3xl);
   line-height: 1.1;
+}
+
+/* Hero title aurora. The layer blends with the title glyphs (darken) and
+   disappears over the dark page background, so only the letters get tinted.
+   Do not isolate the heading: the blend needs the page background as backdrop. */
+.hero__title {
+  position: relative;
+}
+
+.aurora {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  clip-path: inset(0);
+  mix-blend-mode: darken;
+}
+
+.aurora__item {
+  position: absolute;
+  top: -50%;
+  width: 30vw;
+  height: 60vw;
+  background-color: var(--aurora-1);
+  border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+  filter: blur(20px);
+  opacity: 0.9;
+  animation: aurora-border 6s ease-in-out infinite,
+    aurora-drift-1 12s ease-in-out infinite alternate;
+}
+
+.aurora__item:nth-of-type(1) {
+  left: 0;
+}
+
+.aurora__item:nth-of-type(2) {
+  left: 25%;
+  background-color: var(--aurora-2);
+  animation: aurora-border 6s ease-in-out infinite,
+    aurora-drift-2 12s ease-in-out infinite alternate;
+}
+
+.aurora__item:nth-of-type(3) {
+  left: 50%;
+  background-color: var(--aurora-3);
+  animation: aurora-border 6s ease-in-out infinite,
+    aurora-drift-3 8s ease-in-out infinite alternate;
+}
+
+.aurora__item:nth-of-type(4) {
+  left: 75%;
+  background-color: var(--aurora-4);
+  animation: aurora-border 6s ease-in-out infinite,
+    aurora-drift-4 24s ease-in-out infinite alternate;
+}
+
+/* Drift uses transform instead of top/right/bottom/left to stay off layout. */
+@keyframes aurora-drift-1 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(12vw, 8vh);
+  }
+
+  75% {
+    transform: translate(4vw, 8vh);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes aurora-drift-2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  60% {
+    transform: translate(-10vw, 8vh);
+  }
+
+  85% {
+    transform: translate(-3vw, 8vh);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes aurora-drift-3 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  40% {
+    transform: translate(12vw, -8vh);
+  }
+
+  65% {
+    transform: translate(7vw, -3vh);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes aurora-drift-4 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-10vw, -6vh);
+  }
+
+  90% {
+    transform: translate(-5vw, -9vh);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes aurora-border {
+  0% {
+    border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+  }
+
+  25% {
+    border-radius: 47% 29% 39% 49% / 61% 19% 66% 26%;
+  }
+
+  50% {
+    border-radius: 57% 23% 47% 72% / 63% 17% 66% 33%;
+  }
+
+  75% {
+    border-radius: 28% 49% 29% 100% / 93% 20% 64% 25%;
+  }
+
+  100% {
+    border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+  }
+}
+
+/* Without blend support the blobs would paint over the text, so hide them. */
+@supports not (mix-blend-mode: darken) {
+  .aurora {
+    display: none;
+  }
 }
 
 h2 {
@@ -421,6 +582,10 @@ h3 {
   .project-card:focus-within {
     transform: none;
     box-shadow: none;
+  }
+
+  .aurora__item {
+    animation: none;
   }
 
   *,

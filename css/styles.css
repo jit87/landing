@@ -1,16 +1,17 @@
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 
   --color-surface: #1a1530;
   --color-border: #78716c;
   --color-border-soft: #d6d3d1;
   --color-text: #f1eefc;
-  --color-text-muted: #57534e;
+  --color-text-muted: #a9a3bd;
   --color-primary: #7c3aed;
   --color-primary-contrast: #ffffff;
-  --color-danger: #b91c1c;
-  --color-success: #166534;
+  --color-danger: #f87171;
+  --color-success: #4ade80;
   --color-dark: #0f0b1e;
+  --color-bg: #0f0b1e;
   --color-gold: #d4af37;
 
   --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -396,7 +397,12 @@ h3 {
 }
 
 .footer__links a {
-  color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.footer__links a:hover,
+.footer__links a:focus-visible {
+  text-decoration: underline;
 }
 
 @media (min-width: 48rem) {

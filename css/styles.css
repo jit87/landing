@@ -59,7 +59,7 @@ a,
 button,
 [role='button'],
 .button,
-.project-card__link,
+.service-card__link,
 .nav__list a,
 .footer__links a {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='4' fill='%23d4af37'/%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='%23f0c75e' stroke-width='2'/%3E%3C/svg%3E") 16 16, pointer;
@@ -187,6 +187,7 @@ h1 {
    Do not isolate the heading: the blend needs the page background as backdrop. */
 .hero__title {
   position: relative;
+  width: fit-content;
 }
 
 .aurora {
@@ -382,14 +383,14 @@ h3 {
   outline-offset: 2px;
 }
 
-.project-grid {
+.service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
   gap: var(--space-5);
   margin-top: var(--space-5);
 }
 
-.project-card {
+.service-card {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
@@ -402,19 +403,19 @@ h3 {
   will-change: transform;
 }
 
-.project-card:hover {
+.service-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 40px -18px rgba(212, 175, 55, 0.4);
   border-color: color-mix(in srgb, var(--color-gold) 80%, #ffffff 20%);
 }
 
-.project-card:focus-within {
+.service-card:focus-within {
   transform: translateY(-6px);
   box-shadow: 0 18px 40px -18px rgba(212, 175, 55, 0.4);
   border-color: color-mix(in srgb, var(--color-gold) 80%, #ffffff 20%);
 }
 
-.project-card img {
+.service-card img {
   border-radius: var(--radius-md);
 }
 
@@ -433,7 +434,7 @@ h3 {
   color: var(--color-text-muted);
 }
 
-.project-card__link {
+.service-card__link {
   color: var(--color-gold);
   font-weight: 600;
   text-decoration: none;
@@ -442,8 +443,8 @@ h3 {
   cursor: pointer;
 }
 
-.project-card__link:hover,
-.project-card__link:focus-visible {
+.service-card__link:hover,
+.service-card__link:focus-visible {
   text-decoration: underline;
   text-decoration-color: currentColor;
   opacity: 0.9;
@@ -577,9 +578,9 @@ h3 {
     scroll-behavior: auto;
   }
 
-  .project-card,
-  .project-card:hover,
-  .project-card:focus-within {
+  .service-card,
+  .service-card:hover,
+  .service-card:focus-within {
     transform: none;
     box-shadow: none;
   }

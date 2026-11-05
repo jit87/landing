@@ -10,6 +10,35 @@
     yearEl.textContent = String(new Date().getFullYear());
   }
 
+  var contactDialog = document.getElementById('contact-dialog');
+  var contactOpen = document.querySelector('[data-contact-open]');
+  var contactClose = document.querySelector('[data-contact-close]');
+
+  if (contactDialog && contactOpen && typeof contactDialog.showModal === 'function') {
+    contactOpen.addEventListener('click', function() {
+      contactDialog.showModal();
+      document.documentElement.classList.add('has-dialog');
+    });
+
+    if (contactClose) {
+      contactClose.addEventListener('click', function() {
+        contactDialog.close();
+      });
+    }
+
+    // The ::backdrop reports the dialog itself as the event target.
+    contactDialog.addEventListener('click', function(event) {
+      if (event.target === contactDialog) {
+        contactDialog.close();
+      }
+    });
+
+    contactDialog.addEventListener('close', function() {
+      document.documentElement.classList.remove('has-dialog');
+      contactOpen.focus();
+    });
+  }
+
   var form = document.getElementById('contact-form');
   if (!form) {
     return;

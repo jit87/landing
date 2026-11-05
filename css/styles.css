@@ -85,9 +85,11 @@ html {
 body {
   font-family: var(--font-sans);
   font-size: var(--text-base);
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--color-text);
   background: var(--color-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -132,28 +134,41 @@ body {
 .brand {
   color: var(--color-text);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  transition: color 160ms ease-in-out;
+}
+
+.brand:hover,
+.brand:focus-visible {
+  color: var(--color-gold);
 }
 
 .nav__list {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-4);
+  gap: var(--space-2);
 }
 
 .nav__list a {
   display: inline-flex;
   align-items: center;
   min-height: 2.75rem;
-  padding-inline: var(--space-2);
-  color: var(--color-text);
+  padding-inline: var(--space-3);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  font-weight: 500;
   text-decoration: none;
+  transition: color 160ms ease-in-out, background-color 160ms ease-in-out,
+    box-shadow 160ms ease-in-out;
   cursor: pointer;
 }
 
 .nav__list a:hover,
 .nav__list a:focus-visible {
-  text-decoration: underline;
+  color: var(--color-text);
+  background-color: color-mix(in srgb, var(--color-primary) 22%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-gold) 45%, transparent);
 }
 
 .section {
@@ -179,7 +194,9 @@ body {
 
 h1 {
   font-size: var(--text-3xl);
-  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
 }
 
 /* Animación basada en el Pen de htmldesdecero:
@@ -344,12 +361,26 @@ h1 {
 
 h2 {
   font-size: var(--text-2xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
   line-height: 1.15;
 }
 
 h3 {
   font-size: var(--text-xl);
+  font-weight: 600;
+  letter-spacing: -0.01em;
   line-height: 1.2;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 .button {
@@ -361,6 +392,8 @@ h3 {
   border-radius: var(--radius-md);
   text-decoration: none;
   font: inherit;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   border: 1px solid transparent;
   transition: opacity 120ms ease-in-out;
   cursor: pointer;
@@ -384,6 +417,11 @@ h3 {
 .button:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
 }
 
 .service-grid {
@@ -448,9 +486,9 @@ h3 {
 
 .service-card__link:hover,
 .service-card__link:focus-visible {
-  text-decoration: underline;
-  text-decoration-color: currentColor;
-  opacity: 0.9;
+  color: color-mix(in srgb, var(--color-gold) 80%, #ffffff 20%);
+  text-decoration: none;
+  opacity: 1;
 }
 
 .avatar {
@@ -562,12 +600,14 @@ h3 {
 }
 
 .footer__links a {
-  color: var(--color-text);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 160ms ease-in-out;
 }
 
 .footer__links a:hover,
 .footer__links a:focus-visible {
-  text-decoration: underline;
+  color: var(--color-gold);
 }
 
 @media (min-width: 48rem) {

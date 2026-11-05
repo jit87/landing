@@ -126,11 +126,13 @@
     </section>
 
     <section id="contacto" class="section" aria-labelledby="contacto-title">
-      <div class="container">
-        <h2 id="contacto-title">Contacto</h2>
-        <p>Cuéntanos qué necesitas y te respondemos en un día laborable con una primera valoración.</p>
+      <div class="container contact">
+        <div class="contact__intro">
+          <h2 id="contacto-title">Contacto</h2>
+          <p>Cuéntanos qué necesitas y te respondemos en un día laborable con una primera valoración.</p>
+        </div>
         <!-- TODO: configurar Web3Forms o endpoint propio -->
-        <form id="contact-form" novalidate>
+        <form id="contact-form" class="contact-form" novalidate>
           <input type="checkbox" name="botcheck" class="form__honeypot" tabindex="-1" autocomplete="off" hidden>
           <div class="field">
             <label for="nombre">Nombre</label>
@@ -142,7 +144,7 @@
             <input id="email" name="email" type="email" required autocomplete="email" aria-describedby="email-error">
             <p class="field-error" id="email-error" hidden></p>
           </div>
-          <div class="field">
+          <div class="field field--full">
             <label for="mensaje">Mensaje</label>
             <textarea id="mensaje" name="mensaje" rows="5" required minlength="10" aria-describedby="mensaje-error"></textarea>
             <p class="field-error" id="mensaje-error" hidden></p>

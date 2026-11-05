@@ -16,6 +16,13 @@ reads as an unstyled default form rather than part of the page.
 
 Owner feedback: the form must look right on desktop; mobile is acceptable as it is.
 
+## Superseded
+
+On 2026-11-05 the owner changed direction: the form moves behind an envelope button and
+opens in a centered modal, so the desktop two-column card from T2/T3 no longer ships.
+`odd/tasks/contact-envelope.md` replaces that layout. The mobile-first base rules and the
+verification evidence below stay as the historical record of this work unit.
+
 ## Scope
 
 - `.contact` wrapper containing `.contact__intro` (heading + pitch) and the form.
